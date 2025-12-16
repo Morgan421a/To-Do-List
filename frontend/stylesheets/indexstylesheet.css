@@ -1,0 +1,61 @@
+html, body {
+    height: 90%;
+    background-color: purple;
+}
+
+
+
+h1 {
+    text-align: center;
+}
+
+.new-entry {
+    
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    height: 5%;
+    width: 10%;
+}
+
+.container {
+    
+    display: flex;
+    margin: 0 auto;
+    width: 55%;
+    height: 100%;
+    background-color: gray;
+    border-radius: 10%;
+    box-shadow: -9px -9px 9px black,
+                9px 9px 9px black;  
+    padding-top: 1%;       
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+li {
+    padding-left: 0;
+    margin-left: 0;
+    outline: 1px solid red;
+    display: inline-flex;
+    align-items: center;
+    height: 3%;
+    width: 110%;
+    padding-top: 5%;
+    
+}
+
+li button {
+    margin-right: 2em;
+}
+
+.container > ul > li > button {
+    outline: 1px solid red;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 85%;
+    width: 14%;
+    margin-right: 5%;
+}
