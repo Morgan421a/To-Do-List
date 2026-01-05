@@ -1,13 +1,26 @@
-let buttons = document.getElementsByTagName("button");
-let boxChecked = 0;
+let buttons = document.getElementsByClassName("checkbox");
+let boxTicked = false;
 
 for (let btn of buttons) {
-    btn.addEventListener("click", boxChecker);
+    btn.addEventListener("click", boxTicker);
 }
 
+function boxTicker(event) {
+    boxChecker();
+    tickBox(event.currentTarget);
+}
+    
+    
 function boxChecker() {
-    boxChecked = boxChecked === 1 ? 0 : 1;
-    console.log(boxChecked);
+    boxTicked = boxTicked === true ? false : true;
+    console.log(boxTicked);
 }
 
-console.log(boxChecked);
+function tickBox(button) {
+    if (boxTicked == true){
+        button.innerHTML = "✓";
+    } else {
+        button.innerHTML = "";
+    }
+}
+
