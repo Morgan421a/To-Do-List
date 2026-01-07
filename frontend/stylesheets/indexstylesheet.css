@@ -51,11 +51,13 @@ li button {
     margin-right: 2em;
 }
 
-.container > ul > li > button {
+.checkbox {
     outline: 1px solid red;
     display: inline-block;
     box-sizing: border-box;
     height: 85%;
     width: 14%;
     margin-right: 5%;
+    align-self:flex-start
 }
+

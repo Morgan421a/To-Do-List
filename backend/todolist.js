@@ -1,4 +1,4 @@
-let buttons = document.getElementsByClassName("checkbox");
+const buttons = document.getElementsByClassName("checkbox");
 let boxTicked = false;
 
 for (let btn of buttons) {
@@ -22,5 +22,26 @@ function tickBox(button) {
     } else {
         button.innerHTML = "";
     }
+}
+
+const newEntryButton = document.getElementsByClassName("new-entry");
+const list = document.getElementsByTagName("ul")[0];
+
+for (let newBtn of newEntryButton) {
+    newBtn.addEventListener("click", newEntry);
+}
+
+
+let checkbox = document.createElement("button"); //creates a node and specifies the type
+checkbox.type = "checkbox";
+checkbox.classList.add("checkbox");
+checkbox.addEventListener("click", boxTicker)
+
+function newEntry() {
+    // create new list entry and ask for user input, ensure new entry has a working tickbox
+    let newItem = document.createElement('li');
+    newItem.textContent = prompt("Please enter a task", "New Task");
+    newItem.prepend(checkbox);
+    list.appendChild(newItem);
 }
 
