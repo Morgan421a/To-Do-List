@@ -19,7 +19,7 @@ h1 {
 }
 
 .container {
-    
+    outline: 1px solid blue;
     display: flex;
     margin: 0 auto;
     width: 55%;
@@ -29,6 +29,7 @@ h1 {
     box-shadow: -9px -9px 9px black,
                 9px 9px 9px black;  
     padding: 1%;       
+    flex-wrap: wrap;
 }
 
 ul, li {

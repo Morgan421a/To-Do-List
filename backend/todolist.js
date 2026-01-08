@@ -32,7 +32,7 @@ for (let newBtn of newEntryButton) {
 }
 
 
-let checkbox = document.createElement("button"); //creates a node and specifies the type
+let checkbox = document.createElement("input"); //creates a node and specifies the type
 checkbox.type = "checkbox";
 checkbox.classList.add("checkbox");
 checkbox.addEventListener("click", boxTicker)
@@ -45,3 +45,13 @@ function newEntry() {
     list.appendChild(newItem);
 }
 
+const delButton = document.getElementsByClassName("delete");
+
+for (let delBtn of delButton) (
+    delBtn.addEventListener("click", deleteEntry)
+)
+
+
+function deleteEntry() {
+
+}
