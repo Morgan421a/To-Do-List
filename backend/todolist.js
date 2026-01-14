@@ -1,7 +1,7 @@
 // Checkbox
 let boxTicked = false;
 
-function boxTicker(event) {
+function boxTicker() {
     boxChecker();
 }
 
@@ -14,6 +14,19 @@ function boxChecker() {
 }
 
 
+// Delete Button
+let newDelButton = document.createElement("input");
+newDelButton.type = "button";
+newDelButton.classList.add("delete");
+newDelButton.value= "-";
+
+const delButton = document.getElementsByClassName("delete")[0];
+delButton.className = "delete";
+function deleteEntry() {
+    const clickedButton = delButton.closest("li");
+    const index = [...listEntries].indexOf(clickedButton);
+    console.log(index);
+}
 
 
 // New Entry Button
@@ -28,19 +41,12 @@ function newEntry() {
     let newItem = document.createElement("li");
     newItem.textContent = prompt("Please enter a task", "New Task");
     newItem.prepend(checkbox);
-    list.appendChild(newItem);
+    newItem.appendChild(newDelButton);
+    list.appendChild(newItem); 
     listEntries.push(newItem);
 }
 
 
-// Delete Button
-const delButton = document.getElementsByClassName("delete");
-
-function deleteEntry() {
-    const clickedButton = delButton.closest("li");
-    const index = listEntries().indexOf(delButton);
-    console.log(index);
-}
 
 
 // EVENT DELEGATION
